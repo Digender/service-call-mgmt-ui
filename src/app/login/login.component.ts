@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,15 +8,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  selectedOption = {};
+  selectedOption = '1';
   userTypes = [
-    { id: 1, name: 'User1' },
-    { id: 2, name: 'User2' },
-    { id: 3, name: 'User3' },
+    { id: 1, name: 'Admin' },
+    { id: 2, name: 'Group Leader' },
+    { id: 3, name: 'Service Engineer' },
   ];
-  constructor() { }
-
+  username = '';
+  password = '';
+  users = [];
+  user = {};
+  constructor(private router: Router) { }
   ngOnInit() {
+    this.users = JSON.parse(window.localStorage.getItem('users'));
+    const session = window.localStorage.getItem('session');
+    if (session) {
+      this.user = JSON.parse(session);
+      this.router.navigate(['/home']);
+    }
+  }
+
+  login() {
+    this.user = this.users.find((user) => {
+      return user.username === this.username && user.password === this.password;
+    });
+    if (this.user) {
+      window.localStorage.setItem('session', JSON.stringify(this.user));
+      this.router.navigate(['/home']);
+    }
   }
 
 }

@@ -1,0 +1,16 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let cust of customers'>
+      <td>{{cust.id}}</td>
+      <td>{{cust.name}}</td>
+      <td>{{cust.location}}</td>
+    </tr>
+  </tbody>
+</table>

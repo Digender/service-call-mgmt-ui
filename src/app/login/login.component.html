@@ -2,18 +2,18 @@
   <div class="row">
     <div class="col-sm-3 col-md-4 col-xs-hidden"></div>
     <div class="col-sm-6 col-xs-12 col-md-4" style='border: 3px solid #eee;padding-top: 20px;'>
-      <form (ngSubmit)='sendData();'>
+      <form (ngSubmit)='login();'>
         <div class="form-group">
           <select [(ngModel)]="selectedOption" class='form-control' name='type'>
-            <option value=''>Login As</option>
             <option value='{{type.id}}' *ngFor='let type of userTypes'>{{type.name}}</option>
           </select>
         </div>
+        <div>{{username}} | {{password}}</div>
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="User ID">
+          <input type="text" name='username' class="form-control" placeholder="User ID" [(ngModel)]='username'>
         </div>
         <div class="form-group">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" name='password' class="form-control" placeholder="Password" [(ngModel)]='password'>
         </div>
         <div class="form-group col-xs-12">
           <button type='submit' class='btn btn-success '>Log In</button>

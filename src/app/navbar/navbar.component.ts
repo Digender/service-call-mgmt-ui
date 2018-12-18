@@ -18,9 +18,14 @@ export class NavbarComponent implements OnInit {
     { name: 'CAREERS', link: '' },
     { name: 'CONTACT', link: '' },
   ];
+  isLoggedIn: Boolean;
   constructor() { }
 
   ngOnInit() {
+    const session = localStorage.getItem('session');
+    if (session) {
+      this.isLoggedIn = true;
+    }
   }
 
 }

@@ -1,5 +1,8 @@
 export class Customer {
     id: number;
     name: string;
-    location: string;
+    soldToParty: string;
+    contactPerson: string;
+    contactNumber: number;
+    shipToParty: string;
 }

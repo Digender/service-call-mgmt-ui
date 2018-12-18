@@ -35,6 +35,8 @@ export class LoginComponent implements OnInit {
     if (this.user) {
       window.localStorage.setItem('session', JSON.stringify(this.user));
       this.router.navigate(['/home']);
+    } else {
+      alert('Your Creds are wrong. Please reenter correct password');
     }
   }
 

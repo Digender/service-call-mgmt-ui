@@ -10,5 +10,10 @@
       <a class="nav-link" routerLink="reports">Reports</a>
     </li>
   </ul>
+  <ul class="navbar-nav ml-auto"  *ngIf='isLoggedIn'>
+    <li>
+      <a routerLink='/logout'>Log Out</a>
+    </li>
+  </ul>
 </nav>
 <router-outlet></router-outlet>

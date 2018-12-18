@@ -8,13 +8,16 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   user = {};
+  isLoggedIn: boolean;
   constructor(private router: Router) { }
 
   ngOnInit() {
     const session = window.localStorage.getItem('session');
     if (session) {
       this.user = JSON.parse(session);
+      this.isLoggedIn = true;
     } else {
+      this.isLoggedIn = false;
       this.router.navigate(['/login']);
     }
   }

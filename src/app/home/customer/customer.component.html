@@ -1,16 +1,23 @@
+<h3 class='text-center'>Our Customers</h3>
 <table class="table table-bordered">
   <thead>
     <tr>
       <th>ID</th>
       <th>Name</th>
-      <th>Location</th>
+      <th>Sold to Party</th>
+      <th>Contact Person</th>
+      <th>Contact Number</th>
+      <th>Ship to Party</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor='let cust of customers'>
-      <td>{{cust.id}}</td>
-      <td>{{cust.name}}</td>
-      <td>{{cust.location}}</td>
+      <td><a routerLink='{{cust.id}}'>{{cust.id}}</a></td>
+      <td><a routerLink='{{cust.id}}'>{{cust.name}}</a></td>
+      <td>{{cust.soldToParty}}</td>
+      <td>{{cust.contactPerson}}</td>
+      <td>{{cust.contactNumber}}</td>
+      <td>{{cust.shipToParty}}</td>
     </tr>
   </tbody>
 </table>

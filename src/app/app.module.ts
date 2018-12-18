@@ -15,11 +15,12 @@ import { CustomerComponent } from './home/customer/customer.component';
 import { ServiceRequestComponent } from './home/service-request/service-request.component';
 import { ReportsComponent } from './home/reports/reports.component';
 import { DetailComponent } from './customer/detail/detail.component';
+import { CustomerDetailComponent } from './home/customer-detail/customer-detail.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent, children: [
       { path: 'customers', component: CustomerComponent },
-      { path: 'customers/:id', component: CustomerComponent },
+      { path: 'customers/:id', component: CustomerDetailComponent },
       { path: 'service-requests', component: ServiceRequestComponent },
       { path: 'reports', component: ReportsComponent },
     ]
@@ -51,6 +52,7 @@ const appRoutes: Routes = [
     ServiceRequestComponent,
     ReportsComponent,
     DetailComponent,
+    CustomerDetailComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,15 +15,20 @@ import { LogoutComponent } from './logout/logout.component';
 import { CustomerComponent } from './home/customer/customer.component';
 import { ServiceRequestComponent } from './home/service-request/service-request.component';
 import { ReportsComponent } from './home/reports/reports.component';
-import { DetailComponent } from './customer/detail/detail.component';
-import { CustomerDetailComponent } from './home/customer-detail/customer-detail.component';
+import { LocationComponent } from './home/customer/location/location.component';
+import { EquipmentComponent } from './home/customer/equipment/equipment.component';
+import { RaiseTicketComponent } from './home/raise-ticket/raise-ticket.component';
+import { ReportComponent } from './home/report/report.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent, children: [
       { path: 'customers', component: CustomerComponent },
-      { path: 'customers/:id', component: CustomerDetailComponent },
+      { path: 'customers/:id/location', component: EquipmentComponent },
+      { path: 'customers/:id/location/:lid', component: LocationComponent },
+      { path: 'customers/:id/equipments/:eid', component: EquipmentComponent },
       { path: 'service-requests', component: ServiceRequestComponent },
-      { path: 'reports', component: ReportsComponent },
+    { path: 'reports', component: ReportComponent },
+      { path: 'raise-ticket', component: RaiseTicketComponent },
     ]
   },
   { path: 'logout', component: LogoutComponent },
@@ -51,13 +57,16 @@ const appRoutes: Routes = [
     CustomerComponent,
     ServiceRequestComponent,
     ReportsComponent,
-    DetailComponent,
-    CustomerDetailComponent,
+    LocationComponent,
+    EquipmentComponent,
+    RaiseTicketComponent,
+    ReportComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NgbModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only

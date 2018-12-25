@@ -8,15 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   navbarMenus = [
-    { name: 'HOME', link: '' },
-    { name: 'PROFILE', link: '' },
-    { name: 'PRODUCTS', link: '' },
-    { name: 'TECHNOLOGY', link: '' },
-    { name: 'SERVICES', link: '' },
-    { name: 'TRAINING', link: '' },
-    { name: 'MEDIA ROOM', link: '' },
-    { name: 'CAREERS', link: '' },
-    { name: 'CONTACT', link: '' },
+    { name: 'HOME', link: 'home/customers' },
   ];
   isLoggedIn: Boolean;
   constructor() { }

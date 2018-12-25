@@ -1,14 +1,7 @@
 import { Customer } from './customer';
 
 export const CUSTOMERS: Customer[] = [
-{ id: 1, name: 'Mr. Nice', soldToParty: 'Bajaj FinCorp', contactPerson: 'Swapnil Kadam', contactNumber: 9876543210, shipToParty: 'Bajaj' },
-{ id: 2, name: 'Narco', soldToParty: 'Bajaj FinCorp', contactPerson: 'Swapnil Kadam', contactNumber: 9876543210, shipToParty: 'Bajaj' },
-{ id: 3, name: 'Bombasto', soldToParty: 'Bajaj FinCorp', contactPerson: 'Swapnil Kadam', contactNumber: 9876543210, shipToParty: 'Bajaj' },
-{ id: 4, name: 'Celeritas', soldToParty: 'Bajaj FinCorp', contactPerson: 'Swapnil Kadam', contactNumber: 9876543210, shipToParty: 'Bajaj' },
-{ id: 5, name: 'Magneta', soldToParty: 'Bajaj FinCorp', contactPerson: 'Swapnil Kadam', contactNumber: 9876543210, shipToParty: 'Bajaj' },
-{ id: 6, name: 'RubberMan', soldToParty: 'Bajaj FinCorp', contactPerson: 'Swapnil Kadam', contactNumber: 9876543210, shipToParty: 'Bajaj' },
-{ id: 7, name: 'Dynama', soldToParty: 'Bajaj FinCorp', contactPerson: 'Swapnil Kadam', contactNumber: 9876543210, shipToParty: 'Bajaj' },
-{ id: 8, name: 'Dr IQ', soldToParty: 'Bajaj FinCorp', contactPerson: 'Swapnil Kadam', contactNumber: 9876543210, shipToParty: 'Bajaj' },
-{ id: 9, name: 'Magma', soldToParty: 'Bajaj FinCorp', contactPerson: 'Swapnil Kadam', contactNumber: 9876543210, shipToParty: 'Bajaj' },
-{ id: 10, name: 'Tornado', soldToParty: 'Bajaj FinCorp', contactPerson: 'Swapnil Kadam', contactNumber: 9876543210, shipToParty: 'Bajaj' },
+{ id: 1, name: 'Godrej', soldToParty: 'Bajaj FinCorp', contactPerson: 'Swapnil Kadam', contactNumber: 9876543210, shipToParty: 'Godrej' },
+{ id: 2, name: 'L & T', soldToParty: 'Bajaj FinCorp', contactPerson: 'Digender Mahara', contactNumber: 8798545454, shipToParty: 'L & T' },
+{ id: 3, name: 'Lodha', soldToParty: 'Bajaj FinCorp', contactPerson: 'Ramesh Chakra', contactNumber: 7845456565, shipToParty: 'Lodha Co' },
 ];

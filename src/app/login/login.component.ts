@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
     const session = window.localStorage.getItem('session');
     if (session) {
       this.user = JSON.parse(session);
-      this.router.navigate(['/home']);
+      this.router.navigate(['/home/customers ']);
     }
   }
 
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
     });
     if (this.user) {
       window.localStorage.setItem('session', JSON.stringify(this.user));
-      this.router.navigate(['/home']);
+      this.router.navigate(['/home/customers']);
     } else {
       alert('Your Creds are wrong. Please reenter correct password');
     }

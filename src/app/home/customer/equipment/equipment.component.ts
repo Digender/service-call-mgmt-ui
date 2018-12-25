@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { EQUIPMENTS } from './mock-equipment';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-equipment',
@@ -7,13 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EquipmentComponent implements OnInit {
 
-  equipments = [
-    'http://www.schwingstetterindia.com/admin/product/image2/5273821051bp350.jpg',
-    'http://www.schwingstetterindia.com/admin/product/image2/4913599747sp1800.jpg',
-    'http://www.schwingstetterindia.com/admin/product/image2/1984547549sp8800.jpg',
-    'http://www.schwingstetterindia.com/admin/product/image2/7748100157sp1200.jpg',
-  ];
-  constructor() { }
+  selectedImage = '';
+  constructor(private route: ActivatedRoute) {
+    const id = +route.snapshot.paramMap.get('eid');
+
+    this.selectedImage = EQUIPMENTS[id - 1].img;
+  }
 
   ngOnInit() {
   }

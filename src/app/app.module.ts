@@ -23,9 +23,8 @@ import { ReportComponent } from './home/report/report.component';
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent, children: [
       { path: 'customers', component: CustomerComponent },
-      { path: 'customers/:id/location', component: EquipmentComponent },
-      { path: 'customers/:id/location/:lid', component: LocationComponent },
-      { path: 'customers/:id/equipments/:eid', component: EquipmentComponent },
+      { path: 'customers/locations/:lid', component: LocationComponent },
+      { path: 'customers/locations/:lid/equipments/:eid', component: EquipmentComponent },
       { path: 'service-requests', component: ServiceRequestComponent },
     { path: 'reports', component: ReportComponent },
       { path: 'raise-ticket', component: RaiseTicketComponent },

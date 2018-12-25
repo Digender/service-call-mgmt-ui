@@ -9,10 +9,10 @@
   </div>
 </div>
 <div class="container" *ngIf='customer.name'>
-  <h3 class='text-center'>Customer Name: {{customer.name}}</h3>
+  <h3 class='text-center' style='padding: 10px;'>{{customer.name}}</h3>
   <hr/>
   <div class="row">
-    <div class='col'>Customer Id: <b>{{customer.name}}</b></div>
+    <div class='col'>Customer Id: <b>C00000{{customer.id}}</b></div>
     <div class='col'>Contact Person: <b>{{customer.contactPerson}}</b></div>
     <div class='col'>Contact Name: <b>{{customer.contactNumber}}</b></div>
   </div>
@@ -22,21 +22,21 @@
 
 <div class="container" style="margin-top: 20px;" *ngIf='customer.name'>
   <div class="row">
-    <a class="col boxer" href='#'>
+    <a class="col boxer" routerLink='locations/1'>
       <h5>{{addresses[0].shortName}}</h5>
       <p>{{addresses[0].address}}</p>
     </a>
-    <a class="col boxer" href='#'>
+    <a class="col boxer" routerLink='locations/2'>
       <h5>{{addresses[1].shortName}}</h5>
       <p>{{addresses[1].address}}</p>
     </a>
   </div>  
   <div class="row">
-    <a class="col boxer" href='#'>
+    <a class="col boxer" routerLink='locations/3'>
       <h5>{{addresses[2].shortName}}</h5>
       <p>{{addresses[2].address}}</p>
     </a>
-    <a class="col boxer" href='#'>
+    <a class="col boxer" routerLink='locations/4'>
       <h5>{{addresses[3].shortName}}</h5>
       <p>{{addresses[3].address}}</p>
     </a>

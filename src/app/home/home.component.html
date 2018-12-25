@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-sm bg-light">
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" routerLink="customers">Our Customers</a>
+      <a class="nav-link" routerLink="customers">Customer</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" routerLink="service-requests">Service Requests</a>
@@ -10,7 +10,7 @@
       <a class="nav-link" routerLink="reports">Reports</a>
     </li>
   </ul>
-  <ul class="navbar-nav mlng s -o-auto"  *ngIf='isLoggedIn'>
+  <ul class="navbar-nav ml-auto"  *ngIf='isLoggedIn'>
     <li>
       <a routerLink='/logout'>Log Out</a>
     </li>

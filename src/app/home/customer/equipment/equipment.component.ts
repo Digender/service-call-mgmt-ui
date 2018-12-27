@@ -9,14 +9,19 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EquipmentComponent implements OnInit {
 
+  equipment;
   selectedImage = '';
   constructor(private route: ActivatedRoute) {
     const id = +route.snapshot.paramMap.get('eid');
-
-    this.selectedImage = EQUIPMENTS[id - 1].img;
+    this.equipment = EQUIPMENTS[id - 1] || {};
   }
 
   ngOnInit() {
   }
 
+  raiseTicket() {
+    localStorage.setItem('tickets', JSON.stringify({
+      id: 1
+    }));
+  }
 }

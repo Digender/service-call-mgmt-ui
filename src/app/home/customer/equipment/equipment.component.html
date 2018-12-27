@@ -1,7 +1,26 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4 col-sm-6 col-xs-12 text-center">
-      <img src='{{selectedImage}}'/>
+    <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+      <img src='{{equipment.img}}'/>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12 text-center">
+      <table class='table table-striped'>
+        <tr>
+          <td>Model:</td>
+          <td> <b>{{equipment.model}}</b></td>
+        </tr>
+          <tr>
+            <td>Warranty Start Date:</td>
+            <td> <b>{{equipment.warrantyStart}}</b></td>
+          </tr>
+          <tr>
+            <td>Warranty End Date:</td>
+            <td> <b>{{equipment.warrantyEnd}}</b></td>
+          </tr>
+          <tr class='text-center'>
+            <button (click)='raiseTicket()'>Raise Ticket</button>
+          </tr>
+      </table>
     </div>
   </div>
 </div>

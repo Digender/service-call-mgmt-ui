@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ADDRESSES } from './mock-address';
 import { ActivatedRoute } from '@angular/router';
-import { EQUIPMENTS } from '../equipment/mock-equipment';
 
 @Component({
   selector: 'app-location',
@@ -15,7 +13,11 @@ export class LocationComponent implements OnInit {
   constructor(private route: ActivatedRoute) {
     const id: number = +route.snapshot.paramMap.get('lid');
     if (id) {
-      this.location = ADDRESSES.find(x => x.id === id);
+      const locs = localStorage.getItem('locations');
+      const LOACTIONS = JSON.parse(locs);
+      this.location = LOACTIONS.find(x => x.id === id);
+      const equips = localStorage.getItem('locations');
+      const EQUIPMENTS = JSON.parse(equips);
       this.equipments = EQUIPMENTS;
     }
   }

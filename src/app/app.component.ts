@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PreloadDataService } from './common/services/preload-data.service';
 
 @Component({
   selector: 'app-root',
@@ -6,13 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  title = 'service-mgmt-ui';
+  title = 'Service Management';
+  constructor(private preloadService: PreloadDataService) {
+    preloadService.loadData();
+  }
   ngOnInit() {
-    const users = [
-      { id: 1, name: 'Admin', type: 1, username: 'admin', password: '123456' },
-      { id: 2, name: 'Digender', type: 2, username: 'digender', password: '123456' },
-      { id: 3, name: 'Swapnil', type: 3, username: 'swapnil', password: '123456' },
-    ];
-    window.localStorage.setItem('users', JSON.stringify(users));
   }
 }

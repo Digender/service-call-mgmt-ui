@@ -29,8 +29,6 @@ export class CustomerComponent implements OnInit {
     const cust = this.cust_loc_equip.find(x => x.custId === customer.id);
     this.addresses = this.locations
       .filter(l => cust.locations.some(cl => cl.id === l.id));
-    this.meta = {
-      locations : cust.locations.length,
-    };
+    console.log(this.addresses);
   }
 }

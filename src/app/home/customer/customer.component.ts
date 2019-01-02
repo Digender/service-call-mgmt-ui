@@ -29,6 +29,9 @@ export class CustomerComponent implements OnInit {
     const cust = this.cust_loc_equip.find(x => x.custId === customer.id);
     this.addresses = this.locations
       .filter(l => cust.locations.some(cl => cl.id === l.id));
-    console.log(this.addresses);
+    this.addresses = this.addresses.map((add, idx) => {
+      const loc = cust.locations.find(x => x.id === add.id);
+      return { ...add, count: loc.equipmentIds.length };
+    });
   }
 }

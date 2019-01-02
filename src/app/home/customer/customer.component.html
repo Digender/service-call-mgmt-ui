@@ -24,6 +24,7 @@
   <div class="row">
     <a class="col boxer" routerLink='locations/{{address.id}}' *ngFor='let address of addresses'>
       <h5>{{address.shortName}}</h5>
+      <span>Equipments ({{address.count}})</span>
       <p>{{address.address}}</p>
     </a>
   </div>  

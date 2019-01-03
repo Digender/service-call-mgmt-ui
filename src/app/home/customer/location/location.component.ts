@@ -16,9 +16,8 @@ export class LocationComponent implements OnInit {
       const locs = localStorage.getItem('locations');
       const LOACTIONS = JSON.parse(locs);
       this.location = LOACTIONS.find(x => x.id === id);
-      const equips = localStorage.getItem('locations');
-      const EQUIPMENTS = JSON.parse(equips);
-      this.equipments = EQUIPMENTS;
+      const equips = localStorage.getItem('equipments');
+      this.equipments = JSON.parse(equips);
     }
   }
 

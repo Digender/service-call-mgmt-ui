@@ -5,4 +5,5 @@ export class Customer {
     contactPerson: string;
     contactNumber: number;
     shipToParty: string;
+    HO: string;
 }
